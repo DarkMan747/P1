@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ᴅᴀʀᴋ ᴘɪᴇᴄᴇ</title>
+  <style>
+    /*Styles for the table*/
+    .as {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      
+    }
+    th, td {
+      border: 5px solid #0b96a0;
+      padding: 20px;
+      text-align: center;
+    }
+    th {
+      background-color: #096230;
+      text-align: center;
+    }
+
+
+    /* Default mode is light mode */
+    body {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      text-align: center;
+      font-size: 26px;
+    }
+
+    /* Media Queries for Responsive Design */
+    @media only screen and (max-width: 600px) {
+      table {
+        width:100%;
+      }
+      th, td {
+        font-size: 12px;
+        text-align: center;
+      }
+    }
+    #dark_mod {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 11px 14px;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+      color: #222222;
+    }
+    #dark_mod:hover {
+      background-color: #868686;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <h1>（ᴅᴀʀᴋ✧ᴘɪᴇᴄᴇ）</h1>
+  <div id="dark_mod" onclick='changeTheme()' ><img src="dark_mode.png" alt="image" height="27"width="27" ></div>
+
+
+
+
+  <table>
+    <caption>«ᴅᴀʀᴋ✧بــنـك»</caption>
+    <tr>
+      <th>البيلي</th>
+      <th>اللقب</th>
+    </tr>
+
+
+  <table>
+    <tr>
+      <th>الــمؤاسـس</th>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td>30k</td>
+      <td>جــوي بـوي</td>
+    </tr>
+  <table>
+
+
+    <tr>
+      <th>الــنـائب</th>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td>30k</td>
+      <td>ريــمـورو</td>
+    </tr>
+  </table>
+
+
+  <table>
+    <tr>
+      <th>الأعــضـاء</th>
+    </tr>
+  </table>
+
+  <table>
+
+    <tr>
+      <td>30k</td>
+      <td>جوي بوي</td>
+    </tr>
+
+    <tr>
+      <td>Jane Smith</td>
+      <td>25</td>
+    </tr>
+
+    <tr>
+      <td>Bob Johnson</td>
+      <td>35</td>
+    </tr>
+
+  </table>
+
+  <span class="as">تم تصميم الموقع بواسطة جوي بوي</span>
+
+  <script>
+        if(localStorage.getItem("themeMode") === "dark"){
+        addCssDark();
+        }else{
+        localStorage.setItem("themeMode", "light");
+        }
+        function changeTheme(){
+        if(localStorage.getItem("themeMode") === "light"){
+        addCssDark();
+        localStorage.setItem("themeMode", "dark");
+        }else{
+        document.getElementById("masdark").remove();
+        document.getElementById("dark_mod").classList.remove("active");
+        localStorage.setItem("themeMode", "light");
+        document.getElementById("dark_mod").title = "الوضع الداكن";
+        }
+        }
+        function addCssDark(){
+        document.head.innerHTML = document.head.innerHTML + '<style id="masdark">html, html body {color: #eeeeee !important; background-color: #292929 !important;} a {color: #8db2e5 !important;} a:visited {color: rgb(211, 138, 138) !important;} #dark_mod.active {background: #fff !important;}</style>';
+        document.getElementById("dark_mod").classList.add("active");
+        document.getElementById("dark_mod").title = "الوضع الفاتح";
+        }
+
+  </script>
+</body>
+</html>
